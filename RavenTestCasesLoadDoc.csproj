@@ -38,11 +38,11 @@
     <Reference Include="Lambda2Js.Signed, Version=3.1.4.0, Culture=neutral, PublicKeyToken=9ba16f7edfc48fe6, processorArchitecture=MSIL">
       <HintPath>packages\Lambda2Js.Signed.3.1.4\lib\net40\Lambda2Js.Signed.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNetCore.JsonPatch, Version=6.0.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.AspNetCore.JsonPatch.6.0.11\lib\net461\Microsoft.AspNetCore.JsonPatch.dll</HintPath>
+    <Reference Include="Microsoft.AspNetCore.JsonPatch, Version=8.0.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNetCore.JsonPatch.8.0.8\lib\net462\Microsoft.AspNetCore.JsonPatch.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
@@ -57,7 +57,7 @@
       <HintPath>packages\Microsoft.TestPlatform.ObjectModel.17.10.0\lib\net462\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Nito.AsyncEx.Coordination, Version=5.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Nito.AsyncEx.Coordination.5.1.2\lib\net461\Nito.AsyncEx.Coordination.dll</HintPath>
@@ -71,17 +71,17 @@
     <Reference Include="Nito.Disposables, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Nito.Disposables.2.2.1\lib\net461\Nito.Disposables.dll</HintPath>
     </Reference>
-    <Reference Include="Raven.Client, Version=5.4.5.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
-      <HintPath>packages\RavenDB.Client.5.4.5\lib\netstandard2.0\Raven.Client.dll</HintPath>
+    <Reference Include="Raven.Client, Version=6.2.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <HintPath>packages\RavenDB.Client.6.2.0\lib\netstandard2.0\Raven.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Raven.Embedded, Version=5.4.5.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
-      <HintPath>packages\RavenDB.Embedded.5.4.5\lib\net461\Raven.Embedded.dll</HintPath>
+    <Reference Include="Raven.Embedded, Version=6.2.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <HintPath>packages\RavenDB.Embedded.6.2.0\lib\net462\Raven.Embedded.dll</HintPath>
     </Reference>
-    <Reference Include="Raven.TestDriver, Version=5.4.5.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
-      <HintPath>packages\RavenDB.TestDriver.5.4.5\lib\net461\Raven.TestDriver.dll</HintPath>
+    <Reference Include="Raven.TestDriver, Version=6.2.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <HintPath>packages\RavenDB.TestDriver.6.2.0\lib\net462\Raven.TestDriver.dll</HintPath>
     </Reference>
-    <Reference Include="Sparrow, Version=5.4.5.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
-      <HintPath>packages\RavenDB.Client.5.4.5\lib\netstandard2.0\Sparrow.dll</HintPath>
+    <Reference Include="Sparrow, Version=6.2.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <HintPath>packages\RavenDB.Client.6.2.0\lib\netstandard2.0\Sparrow.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -164,6 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="license.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -179,8 +182,8 @@
     <Error Condition="!Exists('packages\xunit.core.2.9.2\build\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\xunit.core.2.9.2\build\xunit.core.props'))" />
     <Error Condition="!Exists('packages\xunit.core.2.9.2\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\xunit.core.2.9.2\build\xunit.core.targets'))" />
     <Error Condition="!Exists('packages\xunit.runner.visualstudio.2.8.2\build\net462\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\xunit.runner.visualstudio.2.8.2\build\net462\xunit.runner.visualstudio.props'))" />
-    <Error Condition="!Exists('packages\RavenDB.Embedded.5.4.5\build\RavenDB.Embedded.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\RavenDB.Embedded.5.4.5\build\RavenDB.Embedded.targets'))" />
+    <Error Condition="!Exists('packages\RavenDB.Embedded.6.2.0\build\RavenDB.Embedded.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\RavenDB.Embedded.6.2.0\build\RavenDB.Embedded.targets'))" />
   </Target>
   <Import Project="packages\xunit.core.2.9.2\build\xunit.core.targets" Condition="Exists('packages\xunit.core.2.9.2\build\xunit.core.targets')" />
-  <Import Project="packages\RavenDB.Embedded.5.4.5\build\RavenDB.Embedded.targets" Condition="Exists('packages\RavenDB.Embedded.5.4.5\build\RavenDB.Embedded.targets')" />
+  <Import Project="packages\RavenDB.Embedded.6.2.0\build\RavenDB.Embedded.targets" Condition="Exists('packages\RavenDB.Embedded.6.2.0\build\RavenDB.Embedded.targets')" />
 </Project>
