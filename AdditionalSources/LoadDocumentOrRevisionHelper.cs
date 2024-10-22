@@ -26,10 +26,10 @@ namespace SocialStack.RavenDB.IndexingExtensions.AdditionalSources
                     "Indexing scope was not initialized. Key: " + keyOrEnumerable);
 
             if (keyOrEnumerable is LazyStringValue keyLazy)
-                return CurrentIndexingScope.Current.LoadDocument(keyLazy, null, collectionName);
+                return LoadDocumentById(keyLazy, null, collectionName);
 
             if (keyOrEnumerable is string keyString)
-                return CurrentIndexingScope.Current.LoadDocument(null, keyString, collectionName);
+                return LoadDocumentById(null, keyString, collectionName);
 
             if (keyOrEnumerable is DynamicNullObject || keyOrEnumerable is null)
                 return DynamicNullObject.Null;
